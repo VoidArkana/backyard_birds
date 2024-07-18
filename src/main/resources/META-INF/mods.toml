@@ -1,0 +1,24 @@
+modLoader="javafml"
+loaderVersion="${loader_version_range}"
+license="All Rights Reserved"
+[[mods]]
+modId="backyard_birds"
+version="1.0.0"
+displayName="Backyard Birds"
+credits="${mod_authors}"
+description='''
+${mod_description}
+'''
+[[dependencies.backyard_birds]]
+    modId="forge"
+    mandatory=true
+    versionRange="${neo_version_range}" #mandatory
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.backyard_birds]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="${minecraft_version_range}"
+    ordering="NONE"
+    side="BOTH"
+    
