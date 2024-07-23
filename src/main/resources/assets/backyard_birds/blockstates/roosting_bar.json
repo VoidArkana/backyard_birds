@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "backyard_birds:block/roosting_bar"
+    },
+    "facing=north": {
+      "model": "backyard_birds:block/roosting_bar",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "backyard_birds:block/roosting_bar",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "backyard_birds:block/roosting_bar"
+    }
+  }
+}

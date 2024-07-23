@@ -1,0 +1,9 @@
+{
+  "item.backyard_birds.bbchicken_spawn_egg" : "Chicken Spawn Egg",
+  "item.backyard_birds.multipurpose_feed" : "Multipurpose Feed",
+  "block.backyard_birds.roosting_bar" : "Roosting Bar",
+
+  "backyard_birds.sound.subtitle.rooster_crow": "Rooster Crows",
+
+  "creativetab.backyard_birds_tab": "Backyard Birds"
+}

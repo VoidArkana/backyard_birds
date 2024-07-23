@@ -1,0 +1,11 @@
+{
+  "rooster_crow": {
+    "category": "neutral",
+    "sounds": [
+      {
+        "name": "backyard_birds:rooster_crow"
+      }
+    ],
+    "subtitle": "backyard_birds.sound.subtitle.rooster_crow"
+  }
+}
