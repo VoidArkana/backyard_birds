@@ -22,8 +22,26 @@ public class BBCreativeTab {
 
                         output.accept(BBItems.CHICKEN_SPAWN_EGG.get());
                         output.accept(BBItems.MULTIPURPOSE_FEED.get());
+                        output.accept(BBItems.ROOSTER_FEATHER.get());
                         output.accept(BBBlocks.ROOSTING_BAR.get());
 
+                        output.accept(BBBlocks.RIBBON_BLUE_ONE.get());
+                        output.accept(BBBlocks.RIBBON_BLUE_TWO.get());
+                        output.accept(BBBlocks.RIBBON_BLUE_THREE.get());
+
+                        output.accept(BBBlocks.RIBBON_RED_ONE.get());
+                        output.accept(BBBlocks.RIBBON_RED_TWO.get());
+                        output.accept(BBBlocks.RIBBON_RED_THREE.get());
+
+                        output.accept(BBBlocks.RIBBON_WHITE_ONE.get());
+                        output.accept(BBBlocks.RIBBON_WHITE_TWO.get());
+                        output.accept(BBBlocks.RIBBON_WHITE_THREE.get());
+
+                        output.accept(BBBlocks.METAL_MESH_FENCE.get());
+                        output.accept(BBBlocks.WOOD_MESH_FENCE.get());
+
+                        output.accept(BBItems.BEETLE.get());
+                        output.accept(BBBlocks.BEETLE_BARREL.get());
                     })
                     .build());
 

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "backyard_birds:item/ribbon_award_white_2"
+  }
+}

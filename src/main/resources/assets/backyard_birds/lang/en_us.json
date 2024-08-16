@@ -1,9 +1,64 @@
 {
   "item.backyard_birds.bbchicken_spawn_egg" : "Chicken Spawn Egg",
+  "entity.backyard_birds.bbchicken" : "Chicken",
   "item.backyard_birds.multipurpose_feed" : "Multipurpose Feed",
+  "item.backyard_birds.rooster_feather" : "Rooster Feather",
   "block.backyard_birds.roosting_bar" : "Roosting Bar",
 
+  "block.backyard_birds.ribbon_blue_one" : "Single Laced Blue Award Ribbon",
+  "block.backyard_birds.ribbon_blue_two" : "Double Laced Blue Award Ribbon",
+  "block.backyard_birds.ribbon_blue_three" : "Triple Laced Blue Award Ribbon",
+
+  "block.backyard_birds.ribbon_red_one" : "Single Laced Red Award Ribbon",
+  "block.backyard_birds.ribbon_red_two" : "Double Laced Red Award Ribbon",
+  "block.backyard_birds.ribbon_red_three" : "Triple Laced Red Award Ribbon",
+
+  "block.backyard_birds.ribbon_white_one" : "Single Laced White Award Ribbon",
+  "block.backyard_birds.ribbon_white_two" : "Double Laced White Award Ribbon",
+  "block.backyard_birds.ribbon_white_three" : "Triple Laced White Award Ribbon",
+
   "backyard_birds.sound.subtitle.rooster_crow": "Rooster Crows",
+
+  "screen.is_male.chicken.true": "Sex: Male",
+  "screen.is_male.chicken.false": "Sex: Female",
+
+  "screen.base_color.chicken.0": "Color: Domwhite",
+  "screen.base_color.chicken.1": "Color: Lavender",
+  "screen.base_color.chicken.2": "Color: Black",
+  "screen.base_color.chicken.3": "Color: Red",
+  "screen.base_color.chicken.4": "Color: Buff",
+  "screen.base_color.chicken.5": "Color: Orange",
+  "screen.base_color.chicken.none": "Color: N/A",
+
+  "screen.white_mark.chicken.0" : "White Markings: None",
+  "screen.white_mark.chicken.1" : "White Markings: Barring",
+  "screen.white_mark.chicken.2" : "White Markings: Barring",
+  "screen.white_mark.chicken.none" : "White Markings: N/A",
+
+  "screen.black_mark.chicken.0" : "Black Markings: None",
+  "screen.black_mark.chicken.1" : "Black Markings: Dots",
+  "screen.black_mark.chicken.2" : "Black Markings: Dots",
+  "screen.black_mark.chicken.none" : "Black Markings: N/A",
+
+  "screen.tilt" : "Tilt: ",
+  "screen.size" : "Size: ",
+  "screen.health" : "Health: ",
+  "screen.name" : "Name: ",
+  "screen.dad" : "Father information",
+  "screen.mom" : "Mother information",
+  "screen.none" : "N/A" ,
+
+  "screen.dominant.chicken.true": "Social status: Dominant",
+  "screen.dominant.chicken.false": "Social status: Submisive",
+
+  "screen.can_be_pet.chicken.true": "Can be pet",
+  "screen.can_be_pet.chicken.false": "Is still untrusting",
+
+  "block.backyard_birds.metal_mesh_fence" : "Metal Mesh Fence",
+  "block.backyard_birds.wooden_mesh_fence" : "Wooden Mesh Fence",
+
+  "item.backyard_birds.beetle" : "Beetle",
+  "block.backyard_birds.beetle_barrel" : "Beetle Barrel",
 
   "creativetab.backyard_birds_tab": "Backyard Birds"
 }

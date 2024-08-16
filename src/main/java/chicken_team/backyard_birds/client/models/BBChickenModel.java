@@ -15,13 +15,18 @@ public class BBChickenModel extends GeoModel<BBChicken> {
 
     @Override
     public ResourceLocation getModelResource(BBChicken bbChicken) {
-        return bbChicken.getIsMale() ? new ResourceLocation(BackyardBirds.MOD_ID, "geo/rooster.geo.json")
+        return bbChicken.isBaby() ? new ResourceLocation(BackyardBirds.MOD_ID, "geo/chick.geo.json")
+        : bbChicken.getIsMale() ? new ResourceLocation(BackyardBirds.MOD_ID, "geo/rooster.geo.json")
                 : new ResourceLocation(BackyardBirds.MOD_ID, "geo/hen.geo.json");
     }
 
     @Override
     public ResourceLocation getTextureResource(BBChicken bbChicken) {
-        return new ResourceLocation(BackyardBirds.MOD_ID, "textures/entity/bbchicken/"+bbChicken.getSex()+"/"+bbChicken.getSex()+"_"+bbChicken.getColorName()+".png");
+        if (bbChicken.isBaby()){
+            return new ResourceLocation(BackyardBirds.MOD_ID, "textures/entity/bbchicken/chick/chick.png");
+        }else {
+            return new ResourceLocation(BackyardBirds.MOD_ID, "textures/entity/bbchicken/"+bbChicken.getSex()+"/"+bbChicken.getSex()+"_"+bbChicken.getColorName()+".png");
+        }
     }
 
     @Override
@@ -40,26 +45,31 @@ public class BBChickenModel extends GeoModel<BBChicken> {
         CoreGeoBone neck = this.getAnimationProcessor().getBone("neck_rot");
         CoreGeoBone neck_base = this.getAnimationProcessor().getBone("neck_bump_rot");
         CoreGeoBone body = this.getAnimationProcessor().getBone("body_rot");
-        CoreGeoBone tail = this.getAnimationProcessor().getBone("tail_rot");
-        CoreGeoBone main = this.getAnimationProcessor().getBone("rooster");
+        CoreGeoBone main = this.getAnimationProcessor().getBone("root");
 
         EntityModelData entityData = animationEvent.getData(DataTickets.ENTITY_MODEL_DATA);
 
-        float multiplier = chicken.getIsMale() ? 1 : -0.2F;
-        float multiplier2 = chicken.getIsMale() ? 1 : 1.1F;
-        float multiplier3 = chicken.getIsMale() ? 1 : 1.75F;
+        float multiplier = chicken.isBaby() ? 0.8F : (chicken.getIsMale() ? 1 : -0.2F);
+        float multiplier2 = chicken.isBaby() ? 0.8F : chicken.getIsMale() ? 1 : 1.1F;
+        float multiplier3 = chicken.isBaby() ? 0.8F : chicken.getIsMale() ? 1 : 1.75F;
+        float multiplier4 = chicken.isBaby() ? 1F : chicken.getIsMale() ? 1 : 1.1F;
 
         main.setPosZ(chicken.getTilt() * 0.01F * chicken.getTiltForSleep());
-        body.setRotX((chicken.getTilt() * 10* ((float) Math.PI / 180F)) * multiplier2 * chicken.getTiltForSleep());
-        tail.setRotX(-(chicken.getTilt() * 10 * ((float) Math.PI / 180F)) * multiplier2 * chicken.getTiltForSleep());
+        body.setRotX((chicken.getTilt() * 10* ((float) Math.PI / 180F)) * multiplier4 * chicken.getTiltForSleep());
         neck_base.setRotX(-(chicken.getTilt() * 7.5F * ((float) Math.PI / 180F)) * multiplier * chicken.getTiltForSleep());
         neck.setRotX(-(chicken.getTilt() * 5 * ((float) Math.PI / 180F)) * multiplier3 * chicken.getTiltForSleep());
 
         head.setRotX((entityData.headPitch() * ((float) Math.PI / 180F))/4-(chicken.getTilt()*1.5F* ((float) Math.PI / 180F))*multiplier2);
         head.setRotY(entityData.netHeadYaw() * ((float) Math.PI / 180F)/4);
 
-        body.setPosZ(-chicken.getTilt()*0.5F);
+        if (!chicken.isBaby()) {
+            body.setPosZ(-chicken.getTilt()*0.5F);
+        }
 
+        if (!chicken.isBaby()) {
+            CoreGeoBone tail = this.getAnimationProcessor().getBone("tail_rot");
+            tail.setRotX(-(chicken.getTilt() * 10 * ((float) Math.PI / 180F)) * multiplier2 * chicken.getTiltForSleep());
+        }
 
     }
 }

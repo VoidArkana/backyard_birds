@@ -1,0 +1,7 @@
+{
+  "parent": "backyard_birds:block/mesh_fence_post",
+  "textures": {
+    "block": "minecraft:block/oak_planks",
+    "particle": "minecraft:block/oak_planks"
+  }
+}

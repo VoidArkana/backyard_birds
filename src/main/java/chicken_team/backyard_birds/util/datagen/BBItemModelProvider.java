@@ -19,8 +19,9 @@ public class BBItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
 
         simpleItem(BBItems.MULTIPURPOSE_FEED);
+        simpleItem(BBItems.ROOSTER_FEATHER);
         withExistingParent(BBItems.CHICKEN_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
-
+        simpleItem(BBItems.BEETLE);
     }
 
 

@@ -21,18 +21,32 @@ public class BBChickenRenderer extends GeoEntityRenderer<BBChicken> {
 
     @Override
     public ResourceLocation getTextureLocation(BBChicken bbChicken) {
-       return new ResourceLocation(BackyardBirds.MOD_ID, "textures/entity/bbchicken/"+bbChicken.getSex()+"/"+bbChicken.getSex()+"_"+bbChicken.getColorName()+".png");
+        if (bbChicken.isBaby()){
+            return new ResourceLocation(BackyardBirds.MOD_ID, "textures/entity/bbchicken/chick/chick.png");
+        }else {
+            return new ResourceLocation(BackyardBirds.MOD_ID, "textures/entity/bbchicken/"+bbChicken.getSex()+"/"+bbChicken.getSex()+"_"+bbChicken.getColorName()+".png");
+        }
     }
 
     @Override
     public void render(BBChicken entity, float entityYaw, float partialTicks, PoseStack poseStack,
                        MultiBufferSource bufferSource, int packedLightIn) {
+
+        float multiplier = switch (entity.getSize()) {
+            case 0 -> 0.65F;
+            case 1 -> 0.8F;
+            case 3 -> 1.1F;
+            case 4 -> 1.2F;
+            default -> 1F;
+        };
+
         if(entity.isBaby()) {
-            poseStack.scale(0.6F, 0.6F, 0.6F);
+            poseStack.scale(0.6F*multiplier, 0.6F*multiplier, 0.6F*multiplier);
         }
         else {
-            poseStack.scale(1.0F, 1.0F, 1.0F);
+            poseStack.scale(multiplier, multiplier, multiplier);
         }
+
         super.render(entity, entityYaw, partialTicks, poseStack, bufferSource, packedLightIn);
     }
 }

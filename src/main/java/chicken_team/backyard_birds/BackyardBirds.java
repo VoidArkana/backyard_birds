@@ -1,11 +1,14 @@
 package chicken_team.backyard_birds;
 
 import chicken_team.backyard_birds.client.ClientProxy;
+import chicken_team.backyard_birds.client.screen.BBMenuTypes;
 import chicken_team.backyard_birds.client.sound.BBSounds;
 import chicken_team.backyard_birds.common.CommonProxy;
 import chicken_team.backyard_birds.common.block.BBBlocks;
+import chicken_team.backyard_birds.common.entity.BBEntityPlacers;
 import chicken_team.backyard_birds.common.event.BBCommonEventBus;
 import chicken_team.backyard_birds.common.items.BBItems;
+import chicken_team.backyard_birds.common.network.BBNetworkHandler;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.DistExecutor;
@@ -25,6 +28,7 @@ public class BackyardBirds {
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
 		bus.addListener(this::clientSetup);
+		bus.addListener(this::commonSetup);
 
 		BBEntities.register(bus);
 		BBItems.register(bus);
@@ -32,6 +36,7 @@ public class BackyardBirds {
 
 		BBSounds.register(bus);
 		BBCreativeTab.register(bus);
+		BBMenuTypes.register(bus);
 
 		MinecraftForge.EVENT_BUS.register(this);
 
@@ -43,6 +48,14 @@ public class BackyardBirds {
 
 	private void clientSetup(final FMLClientSetupEvent event) {
 		event.enqueueWork(() -> PROXY.clientInit());
+	}
+
+	private void commonSetup(final FMLClientSetupEvent event) {
+		BBNetworkHandler.init();
+
+		event.enqueueWork(() -> {
+			BBEntityPlacers.entityPlacement();
+		});
 	}
 
 }

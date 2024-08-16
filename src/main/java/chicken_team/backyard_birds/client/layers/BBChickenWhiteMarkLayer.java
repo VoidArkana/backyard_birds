@@ -21,7 +21,7 @@ public class BBChickenWhiteMarkLayer extends GeoRenderLayer<BBChicken> {
     @Override
     public void render(PoseStack poseStack, BBChicken entity, BakedGeoModel bakedModel, RenderType renderType, MultiBufferSource bufferSource, VertexConsumer buffer, float partialTick, int packedLight, int packedOverlay) {
 
-        if (entity.getWhiteMarking()!=0){
+        if (entity.getWhiteMarking()!=0 && !entity.isBaby()){
 
             RenderType cameo = RenderType.entityCutout(new ResourceLocation(BackyardBirds.MOD_ID, "textures/entity/bbchicken/"+entity.getSex()+"/"+entity.getSex()+"_barring_layer.png"));
             ResourceLocation trilobiteModel = new ResourceLocation(BackyardBirds.MOD_ID, "geo/"+entity.getSex()+".geo.json");

@@ -1,0 +1,11 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "#backyard_birds:vanilla_chicken_removed_biomes",
+  "spawners": {
+    "type": "backyard_birds:bbchicken",
+    "weight": 10,
+    "minCount": 2,
+    "maxCount": 6,
+    "category": "creature"
+  }
+}

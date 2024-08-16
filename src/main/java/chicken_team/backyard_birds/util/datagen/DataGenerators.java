@@ -27,6 +27,8 @@ public class DataGenerators {
 //      generator.addProvider(event.includeClient(), new ModBlockStateProvider(packOutput, existingFileHelper));
         generator.addProvider(event.includeClient(), new BBItemModelProvider(packOutput, existingFileHelper));
 
+        generator.addProvider(true, new BBBiomeTagGenerator(packOutput, lookupProvider, existingFileHelper));
+
         BBBlockTagGenerator blockTagGenerator = generator.addProvider(event.includeServer(),
                 new BBBlockTagGenerator(packOutput, lookupProvider, existingFileHelper));
 

@@ -1,0 +1,7 @@
+{
+  "parent": "backyard_birds:block/award_ribbon_1",
+  "textures": {
+    "2": "backyard_birds:block/ribbon_red",
+    "particle": "backyard_birds:item/ribbon_award_red_1"
+  }
+}

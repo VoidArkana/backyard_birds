@@ -19,6 +19,23 @@ public class BBBlockLootTables extends BlockLootSubProvider {
 
         this.dropSelf(BBBlocks.ROOSTING_BAR.get());
 
+        this.dropSelf(BBBlocks.RIBBON_BLUE_ONE.get());
+        this.dropSelf(BBBlocks.RIBBON_BLUE_TWO.get());
+        this.dropSelf(BBBlocks.RIBBON_BLUE_THREE.get());
+
+        this.dropSelf(BBBlocks.RIBBON_RED_ONE.get());
+        this.dropSelf(BBBlocks.RIBBON_RED_TWO.get());
+        this.dropSelf(BBBlocks.RIBBON_RED_THREE.get());
+
+        this.dropSelf(BBBlocks.RIBBON_WHITE_ONE.get());
+        this.dropSelf(BBBlocks.RIBBON_WHITE_TWO.get());
+        this.dropSelf(BBBlocks.RIBBON_WHITE_THREE.get());
+
+        this.dropSelf(BBBlocks.METAL_MESH_FENCE.get());
+
+        this.dropSelf(BBBlocks.WOOD_MESH_FENCE.get());
+
+        this.dropSelf(BBBlocks.BEETLE_BARREL.get());
     }
 
     @Override

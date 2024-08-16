@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "backyard_birds:block/ribbon_blue_one",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "backyard_birds:block/ribbon_blue_one",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "backyard_birds:block/ribbon_blue_one"
+    },
+    "facing=west": {
+      "model": "backyard_birds:block/ribbon_blue_one",
+      "y": 90
+    }
+  }
+}

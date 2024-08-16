@@ -19,6 +19,12 @@ public class BBItems {
     public static final RegistryObject<Item> MULTIPURPOSE_FEED = ITEMS.register("multipurpose_feed",
             ()-> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> ROOSTER_FEATHER = ITEMS.register("rooster_feather",
+            ()-> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> BEETLE = ITEMS.register("beetle",
+            ()-> new Item(new Item.Properties()));
+
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
     }

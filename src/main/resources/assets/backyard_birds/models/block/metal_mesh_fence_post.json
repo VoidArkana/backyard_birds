@@ -1,0 +1,7 @@
+{
+  "parent": "backyard_birds:block/mesh_fence_post",
+  "textures": {
+    "block": "backyard_birds:block/iron_post",
+    "particle": "backyard_birds:block/iron_post"
+  }
+}
